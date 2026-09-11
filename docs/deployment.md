@@ -12,6 +12,7 @@ The production layout uses two public services:
 - Backend API base: `https://document-intelligence-platform-gn7s.onrender.com/api/v1`
 - Health check: `https://document-intelligence-platform-gn7s.onrender.com/api/v1/health`
 - Swagger UI: `https://document-intelligence-platform-gn7s.onrender.com/docs`
+- Development approach: `https://docs.google.com/presentation/d/1Ec6sywdyoi3JuIiW2RbvB6bAQoZPVAhkGDm5VCfPlhs/edit?usp=sharing`
 
 ## Backend on Render
 

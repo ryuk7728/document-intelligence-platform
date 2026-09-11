@@ -31,7 +31,7 @@ The supplied 50-document benchmark processed every file successfully with 39 det
 - Frontend: https://document-intelligence-platform-bice.vercel.app
 - Backend API base: https://document-intelligence-platform-gn7s.onrender.com/api/v1
 - API documentation: https://document-intelligence-platform-gn7s.onrender.com/docs
-- Development approach: [`presentation/Document_Intelligence_Development_Approach.pptx`](presentation/Document_Intelligence_Development_Approach.pptx)
+- Development approach: [Google Slides](https://docs.google.com/presentation/d/1Ec6sywdyoi3JuIiW2RbvB6bAQoZPVAhkGDm5VCfPlhs/edit?usp=sharing) ([repository copy](presentation/Document_Intelligence_Development_Approach.pptx))
 
 ## Repository structure
 

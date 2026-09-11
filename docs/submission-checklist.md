@@ -8,7 +8,7 @@
 | Deployed Frontend URL | `https://document-intelligence-platform-bice.vercel.app` |
 | Deployment Platform Used | `Vercel (frontend), Render (backend and PostgreSQL)` |
 | Public GitHub repository | `https://github.com/ryuk7728/document-intelligence-platform` |
-| Development approach PPT | Upload `presentation/Document_Intelligence_Development_Approach.pptx` to Google Drive and paste its public link |
+| Development approach PPT | `https://docs.google.com/presentation/d/1Ec6sywdyoi3JuIiW2RbvB6bAQoZPVAhkGDm5VCfPlhs/edit?usp=sharing` |
 
 ## Verified before submission
 
@@ -20,9 +20,9 @@
 - [x] The saved record was retrieved by ID, filename, and history after backend redeployment.
 - [x] The final dashboard was visually checked with the persisted record.
 - [x] The latest GitHub Actions test and Linux container jobs passed.
-- [ ] The PPT is uploaded to Google Drive with anyone-with-the-link viewer access.
+- [x] The PPT is uploaded to Google Drive with anyone-with-the-link viewer access and no sign-in required.
 - [ ] All personal form fields are completed.
-- [ ] Every submitted URL is opened in a private/incognito window before final submission.
+- [x] Every technical submission URL returns HTTP 200 without an authenticated application session.
 
 ## Personal form fields still required
 
@@ -36,4 +36,3 @@
 - CGPA
 - Five-day in-office answer
 - Six-month internship/compensation answer
-

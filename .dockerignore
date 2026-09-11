@@ -1,0 +1,13 @@
+.git
+.venv
+.env
+__pycache__
+*.pyc
+*.db
+*.sqlite3
+New Dataset 1.zip
+samples/dataset
+sample_outputs/*.json
+work
+data
+.pytest_cache

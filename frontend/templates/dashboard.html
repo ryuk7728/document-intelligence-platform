@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Extract and reconcile financial documents with page-level evidence.">
+    <title>Document Intelligence Workbench</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Document Intelligence home">
+        <span class="brand-mark" aria-hidden="true">DI</span>
+        <span>Document Intelligence</span>
+      </a>
+      <div class="service-state"><span class="state-dot"></span> Service ready</div>
+    </header>
+
+    <main class="shell">
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Processing workspace</p>
+            <h1 id="workspace-title">Turn financial documents into evidence-backed data.</h1>
+          </div>
+          <p class="section-note">PDF, JPG or PNG · up to 3 pages · 15 MB</p>
+        </div>
+
+        <div class="workspace-grid">
+          <form id="upload-form" class="panel upload-panel">
+            <div class="panel-header">
+              <div>
+                <p class="step-label">01 / INPUT</p>
+                <h2>Process a document</h2>
+              </div>
+            </div>
+
+            <label class="field-label" for="document-type">Document type</label>
+            <select id="document-type" name="document_type" required>
+              <option value="invoice">Invoice</option>
+              <option value="balance_sheet">Balance sheet</option>
+              <option value="profit_and_loss">Profit &amp; loss</option>
+              <option value="cash_flow_statement">Cash flow statement</option>
+            </select>
+
+            <label id="drop-zone" class="drop-zone" for="document-file">
+              <input id="document-file" name="file" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+              <span class="drop-icon" aria-hidden="true">↥</span>
+              <strong id="file-label">Drop a document here</strong>
+              <span>or choose a file from your computer</span>
+            </label>
+
+            <button id="process-button" class="primary-button" type="submit">
+              <span>Extract and validate</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <p id="upload-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <section class="panel history-panel" aria-labelledby="history-title">
+            <div class="panel-header">
+              <div>
+                <p class="step-label">02 / HISTORY</p>
+                <h2 id="history-title">Recent documents</h2>
+              </div>
+              <button id="refresh-button" class="quiet-button" type="button">Refresh</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Document</th><th>Type</th><th>Validation</th><th>Processed</th></tr>
+                </thead>
+                <tbody id="history-body"></tbody>
+              </table>
+              <div id="history-empty" class="empty-state" hidden>
+                <strong>No processed documents yet</strong>
+                <span>Your first result will appear here.</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="result-section" class="result-section" aria-labelledby="result-title" hidden>
+        <div class="result-header">
+          <div>
+            <p class="eyebrow">Processed result</p>
+            <h2 id="result-title">Document result</h2>
+            <p id="result-meta" class="result-meta"></p>
+          </div>
+          <span id="result-status" class="status-pill"></span>
+        </div>
+
+        <div class="tab-list" role="tablist" aria-label="Result views">
+          <button class="tab active" role="tab" aria-selected="true" data-panel="overview-panel">Overview</button>
+          <button class="tab" role="tab" aria-selected="false" data-panel="fields-panel">Extracted data</button>
+          <button class="tab" role="tab" aria-selected="false" data-panel="checks-panel">Validation</button>
+          <button class="tab" role="tab" aria-selected="false" data-panel="json-panel">Raw JSON</button>
+        </div>
+
+        <div id="overview-panel" class="tab-panel"></div>
+        <div id="fields-panel" class="tab-panel" hidden></div>
+        <div id="checks-panel" class="tab-panel" hidden></div>
+        <div id="json-panel" class="tab-panel" hidden><pre id="raw-json"></pre></div>
+      </section>
+    </main>
+
+    <template id="loading-row-template">
+      <tr><td colspan="4"><div class="loading-line"></div></td></tr>
+    </template>
+    <script src="/config.js"></script>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

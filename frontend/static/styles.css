@@ -17,6 +17,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { background: var(--base); }
 body { margin: 0; min-width: 320px; color: var(--ink); background: radial-gradient(circle at 75% 0%, #14263c 0, transparent 34rem), var(--base); }
 button, input, select { font: inherit; }

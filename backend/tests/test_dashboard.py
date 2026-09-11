@@ -17,6 +17,7 @@ def test_dashboard_and_static_assets_are_served(tmp_path, monkeypatch) -> None:
     assert 'id="upload-form"' in dashboard.text
     assert stylesheet.status_code == 200
     assert "--accent: #f2b84b" in stylesheet.text
+    assert "[hidden] { display: none !important; }" in stylesheet.text
     assert javascript.status_code == 200
     assert 'api("/api/v1/documents?limit=25")' in javascript.text
     assert "`${apiBase}${path}`" in javascript.text

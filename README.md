@@ -26,12 +26,20 @@ The complete application includes:
 
 The supplied 50-document benchmark processed every file successfully with 39 deterministic validation passes, 11 honest `NOT_APPLICABLE` outcomes, and no validation failures.
 
+## Live application
+
+- Frontend: https://document-intelligence-platform-bice.vercel.app
+- Backend API base: https://document-intelligence-platform-gn7s.onrender.com/api/v1
+- API documentation: https://document-intelligence-platform-gn7s.onrender.com/docs
+- Development approach: [`presentation/Document_Intelligence_Development_Approach.pptx`](presentation/Document_Intelligence_Development_Approach.pptx)
+
 ## Repository structure
 
 ```text
 backend/       FastAPI application, services, models, repositories, and tests
 frontend/      HTML templates and static assets
 docs/          Architecture and delivery documentation
+presentation/  Development-approach slide deck
 sample_outputs/ Representative structured JSON responses
 samples/       Local sample-document working area
 ```

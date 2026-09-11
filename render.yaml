@@ -16,9 +16,9 @@ services:
           name: document-intelligence-db
           property: connectionString
       - key: CORS_ORIGINS
-        value: "*"
+        value: "https://document-intelligence-platform-bice.vercel.app"
       - key: ALLOWED_HOSTS
-        value: "*"
+        value: "document-intelligence-platform-gn7s.onrender.com"
       - key: MAX_UPLOAD_PAGES
         value: "3"
       - key: MAX_UPLOAD_SIZE_MB

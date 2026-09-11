@@ -10,6 +10,7 @@ htmlcov/
 *.sqlite3
 uploads/
 work/
+.chart-data-*/
 *.zip
 samples/dataset/
 sample_outputs/*.json
